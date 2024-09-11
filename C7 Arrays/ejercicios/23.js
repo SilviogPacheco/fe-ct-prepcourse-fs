@@ -3,6 +3,16 @@ function breakStatement(num) {
   // Guardar cada nuevo valor en un arreglo y retórnarlo.
   // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y retornar el string: "Se interrumpió la ejecución".
   // Tu código:
+  let array = [];
+  let iteracion = 1;
+  while (iteracion <= 10) {
+    array.push((num += 2));
+    iteracion++;
+    if (num === iteracion) {
+      return "Se interrumpió la ejecución";
+    }
+  }
+  return array;
 }
 
 module.exports = breakStatement;
